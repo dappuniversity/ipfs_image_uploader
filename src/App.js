@@ -85,8 +85,9 @@ class App extends Component {
         return
       }
       this.simpleStorageInstance.set(result[0].hash, { from: this.state.account }).then((r) => {
+         console.log('ifpsHash', this.state.ipfsHash)
         return this.setState({ ipfsHash: result[0].hash })
-        console.log('ifpsHash', this.state.ipfsHash)
+       
       })
     })
   }
